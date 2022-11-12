@@ -1,12 +1,12 @@
-class Tree Seeds:
+class Tree_Seeds:
     def about(self):
         print('I am Tree Seeds')
     def about_myself(self):
         print('I am Tree Seeds')
-class blackbery tree(Tree Seeds):
+class Blackberry_Tree(Tree_Seeds):
     def about_myself(self):
         print('I am Blackberry Tree')
-class Berry(Blackberry Tree):
+class Berry(Blackberry_Tree):
     height = 3
     def __init__(self):
         print(self.height)
