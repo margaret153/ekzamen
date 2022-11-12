@@ -13,11 +13,11 @@ conversion_code = {
 
 converted_data = ""
 
-for i in range(0, len(data)):
-    if data[i] in conversion_code.keys():
-        converted_data += conversion_code[data[i]]
+for y in range(0, len(data)):
+    if data[y] in conversion_code.keys():
+        converted_data += conversion_code[data[y]]
     else:
-        converted_data += data[i]
+        converted_data += data[y]
 
 
 print(converted_data)
