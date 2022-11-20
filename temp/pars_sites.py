@@ -15,7 +15,7 @@ soup = BeautifulSoup(response.text,"lxml")
 all_product = soup.find('div', class_='products-layout__container products-layout--grid')
 
 product_list = all_product.find_all('div', class_='product-card')
-print(product_list[0])
+#print(product_list[0])
 
 for i in range(len(product_list)):
     product_title = product_list[i].find('a', class_='product-card__title')
@@ -25,6 +25,8 @@ for i in range(len(product_list)):
     try:
         product_cost = product_list[i].find('a', class_='("v-pb__old")')
         product_cost_with_discount = product_list[i].find('div', class_='v-pb__cur discount')
+        with open('myproduct.txt', 'a', encoding='utf-8') as file:
+            file.write(f"{url, product_title.text},{product_cost.text},{product_cost_with_discount.text,}'\n'")
         print(product_title.text)
         print(product_cost.text)
         print(product_cost_with_discount)
