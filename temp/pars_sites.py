@@ -19,7 +19,20 @@ print(product_list[0])
 
 for i in range(len(product_list)):
     product_title = product_list[i].find('a', class_='product-card__title')
-    print(product_title.text)
+    #print(product_title.text)
+    #print(product_cost.text)
+
+    try:
+        product_cost = product_list[i].find('a', class_='("v-pb__old")')
+        product_cost_with_discount = product_list[i].find('div', class_='v-pb__cur discount')
+        print(product_title.text)
+        print(product_cost.text)
+        print(product_cost_with_discount)
+    except AttributeError:
+        print('No items')
+
+
+
 
 
 # response = requests.get(url)
