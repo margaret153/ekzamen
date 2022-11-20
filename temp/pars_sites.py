@@ -26,10 +26,8 @@ for i in range(len(product_list)):
         product_cost = product_list[i].find('a', class_='("v-pb__old")')
         product_cost_with_discount = product_list[i].find('div', class_='v-pb__cur discount')
         with open('myproduct.txt', 'a', encoding='utf-8') as file:
-            file.write(f"{url, product_title.text},{product_cost.text},{product_cost_with_discount.text,}'\n'")
-        print(product_title.text)
-        print(product_cost.text)
-        print(product_cost_with_discount)
+            file.write(f"{url, product_title.text},{product_cost.text},{product_cost_with_discount.text}'\n'")
+
     except AttributeError:
         print('No items')
 
